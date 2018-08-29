@@ -11,20 +11,8 @@ struct Node {
     Node* next;
     Node* prev;
 
-    void killSelf() {
-        if (prev) {
-            prev = nullptr;
-            next->killSelf();
-
-            delete this;
-        }
-    }
-    void print_next(Node <T> *end) {
-        if (next != end)
-            next->print_next(end);
-
-        cout << data << " ";
-    }
+    void killSelf();
+    void print_next();
 };
 
 #endif
