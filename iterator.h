@@ -6,13 +6,13 @@
 template <typename T>
 class Iterator {
     private:
-        Node<T>* current;
+        Node <T> *current;
 
     public:
         Iterator() {
             current = nullptr;
         };
-        Iterator(Node<T>* node) {
+        Iterator(Node <T> *node) {
             current = node;
         }
 

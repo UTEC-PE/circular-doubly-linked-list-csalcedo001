@@ -169,8 +169,10 @@ class List {
         Iterator<T> begin() {
             return Iterator <T> (start);
         }
+        // TODO
         Iterator<T> end() {
-            return Iterator <T> (start);
+            // end() should be a value after start->prev different from start
+            return Iterator <T> (start->prev);
         }
 
         ~List() {
