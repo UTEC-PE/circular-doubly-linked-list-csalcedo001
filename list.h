@@ -22,13 +22,13 @@ class List {
 
         T front() {
             if (!start)
-                return -1;
+                return -1; // Deberías retornar una excepción y no un número
 
             return start->data;
         }
         T back() {
             if (!start)
-                return -1;
+                return -1; // Deberías retornar una excepción y no un número
 
             return start->prev->data;
         }
@@ -115,7 +115,7 @@ class List {
         T get(int position) {
             Node <T> *tmp = start;
 
-            if (position >= 0)
+            if (position >= 0) // Podrías sacar el módulo
                 while (position--)
                     tmp = tmp->next;
             else
@@ -124,7 +124,7 @@ class List {
 
             return tmp->data;
         }
-        void concat(List<T> &other) {
+        void concat(List<T> &other) { // Hay mejores maneras, no es necesario reincluir todo
             int length = other.nodes;
             Node <T> *tmp_other = other.start;
 
